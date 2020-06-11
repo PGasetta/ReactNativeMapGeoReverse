@@ -53,8 +53,7 @@ const Home = () =>{
           const location = await Location.getCurrentPositionAsync();
           const { latitude, longitude } = location.coords;
           setInitialPosition([latitude,longitude]);
-          
-          GeoCoding(latitude, longitude);
+          GeoCoding(latitude,longitude);
       }
       loadPosition();
   },[]);
@@ -64,9 +63,9 @@ const Home = () =>{
     const response = await api.get(`https://api.opencagedata.com/geocode/v1/geojson?q=${latitude}%2C%20${longitude}&key=ADD_YOUR_API_KEY&language=pt&pretty=1`);
         var resultado = response.data;
         const arq = resultado.features[0];
-        const {city , state_code} = arq.properties.components;
-        setSelectedCidade(city);
+        const {city_district , state_code} = arq.properties.components;
         setSelectedUF(state_code);
+        setSelectedCidade(city_district);
     }
 
     function handleSelectUF(event: any){
