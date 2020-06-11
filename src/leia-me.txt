@@ -1,0 +1,16 @@
+npm install axios
+expo install react-native-maps
+expo install expo-location
+npm install react-native-picker-select
+
+
+https://reactnavigation.org/
+https://reactnavigation.org/docs/getting-started
+expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+npm install @react-navigation/native
+npm install @react-navigation/stack
+
+
+API GEO
+https://opencagedata.com/
